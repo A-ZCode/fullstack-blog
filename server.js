@@ -1,12 +1,11 @@
 const cors = require('cors');
-
 const express = require('express');
 const app = express();
 const postsRouter = require('./routes/posts');
-const PORT = 3000;
+
+const PORT = process.env.PORT || 3000; // dynamic port
 
 app.use(cors());
-
 app.use(express.json());
 
 // API Routes
@@ -20,3 +19,4 @@ app.get('/', (req, res) => {
 app.listen(PORT, () => {
   console.log(`Server is running at http://localhost:${PORT}`);
 });
+
