@@ -1,3 +1,5 @@
+// All the required tools are imported to organize our routes
+// read posts and save posts to posts.json
 const express = require('express');
 const router = express.Router();
 const { getPosts, savePosts } = require('../utils/dataHandler');
